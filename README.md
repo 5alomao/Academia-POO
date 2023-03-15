@@ -5,6 +5,7 @@
 ### Linguagens Utilizadas:
 * Java
 * SQL
+* HTML/CSS
 
 ### Ferramentas Utilizadas:
 * NetBeans
