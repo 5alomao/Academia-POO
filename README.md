@@ -1,18 +1,20 @@
-<h1 align="center">Academia MaisFit</h1>
 <div align="center">
-
-<figure>
-  <img height="600" width="600" src="https://user-images.githubusercontent.com/101257752/225489448-df7ab7e8-c322-41af-a4ff-05edc62b4f22.png" alt="Banner2">
-</figure></div>
-<h2 align="center">Sistemas desenvolvido em Java conectado com Banco de Dados!</h2>
-
+  <h1>Projeto Final Java - Academia</h1>
+  <img height="500" width="500" src="https://user-images.githubusercontent.com/101257752/225490437-e1607090-5b7b-47ed-9996-8f0c92e9f12c.png" alt="Banner2"></img>
+</div>
+  
+  ##
 ### Linguagens Utilizadas:
-* Java
-* SQL
-* HTML/CSS
+<ul>
+  <li>Java</li>
+  <li>SQL</li>
+  <li>HTML/CSS</li>
+</ul>
 
-### Ferramentas Utilizadas:
-* NetBeans
-* MySql Workbench
-* HeidiSQL
-* Xampp
+  ##
+<h3>Ferramentas Utilizadas:</h3>
+<ul>
+  <li>NetBeans</li>
+  <li>MySql Workbench</li>
+  <li>HeidiSQL</li>
+</ul>
