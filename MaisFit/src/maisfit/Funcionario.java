@@ -10,6 +10,18 @@ public class Funcionario {
     private String ctps;
     Cargo cargo = new Cargo();
 
+    
+    void mostraDadosFuncionario(){
+        
+        System.out.println("=-= Dados do Funcionario =-=");
+        System.out.println("Nome: "+this.nome);
+        System.out.println("CPF: "+this.cpf);
+        System.out.println("Telefone: "+this.telefone);
+        System.out.println("Data de Nascimento: "+this.nascimento);
+        System.out.println("Endereço: "+this.endereco);
+        System.out.println("Cargo: "+this.cargo.getCargo());
+        
+    }
     public String getNome() {
         return nome;
     }

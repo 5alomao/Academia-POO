@@ -8,6 +8,17 @@ public class Produto {
     Categoria categoria = new Categoria();
     Marca marca = new Marca();
 
+    void mostraDadosProduto(){
+        
+        System.out.println("=-= Dados do Produto =-=");
+        System.out.println("Produto: "+this.nome);
+        System.out.println("Valor: "+this.valor);
+        System.out.println("Quantidade: "+this.quantidade);
+        System.out.println("Marca: "+this.marca.getNome());
+        System.out.println("Categoria: "+this.categoria.getNome());
+        
+    }
+    
     public String getNome() {
         return nome;
     }

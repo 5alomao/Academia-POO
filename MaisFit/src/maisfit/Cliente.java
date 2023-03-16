@@ -10,7 +10,7 @@ public class Cliente {
     
     void mostraDadosCliente(){
         
-        System.out.println("-=-=-=-=-=-=-=-=-=-");
+        System.out.println("=-= Dados do Cliente =-=");
         System.out.println("Nome: "+this.nome);
         System.out.println("CPF: "+this.cpf);
         System.out.println("Telefone: "+this.telefone);
