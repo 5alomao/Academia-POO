@@ -7,7 +7,13 @@ public class Cliente {
     private String telefone;
     private String nascimento;
     private String endereco;
+    private static int id;
+
     
+    Cliente(){
+        Cliente.id = Cliente.id + 1;
+    }
+
     void mostraDadosCliente(){
         
         System.out.println("=-= Dados do Cliente =-=");
@@ -16,9 +22,14 @@ public class Cliente {
         System.out.println("Telefone: "+this.telefone);
         System.out.println("Data de Nascimento: "+this.nascimento);
         System.out.println("Endereço: "+this.endereco);
+        System.out.println("---------------");
         
     }
     
+    public static int getId() {
+        return Cliente.id;
+    }
+     
     public String getNome() {
         return nome;
     }

@@ -8,20 +8,32 @@ public class Funcionario {
     private String nascimento;
     private String endereco;
     private String ctps;
-    Cargo cargo = new Cargo();
-
+    private String cargo;
+    private static int id;
+    
+    
+    Funcionario(){
+        Funcionario.id = Funcionario.id + 1;
+    }
     
     void mostraDadosFuncionario(){
         
         System.out.println("=-= Dados do Funcionario =-=");
         System.out.println("Nome: "+this.nome);
         System.out.println("CPF: "+this.cpf);
+        System.out.println("Cargo: "+this.cargo);
+        System.out.println("CTPS:"+this.ctps);
         System.out.println("Telefone: "+this.telefone);
-        System.out.println("Data de Nascimento: "+this.nascimento);
         System.out.println("Endereço: "+this.endereco);
-        System.out.println("Cargo: "+this.cargo.getCargo());
+        System.out.println("Data de Nascimento: "+this.nascimento);
+        System.out.println("---------------");
         
     }
+
+    public static int getId() {
+        return Funcionario.id;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -70,12 +82,12 @@ public class Funcionario {
         this.ctps = ctps;
     }
 
-    public Cargo getCargo() {
+    public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(Cargo cargo) {
+    public void setCargo(String cargo) {
         this.cargo = cargo;
-    }
-      
+    } 
+    
 }
