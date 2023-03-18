@@ -2,24 +2,77 @@ package maisfit;
 
 public class Venda {
     
-    private double formaPagamento;
-    private double desconto;
+    private String formaPagamento;
+    private int desconto;
     private String dataVenda;
     private int quantidade;
+    Produto p;
+    Plano plan;
+    private static int id;
+    
+    Venda(){
+        Venda.id = Venda.id + 1 ;
+    }
+    
+    Venda(Produto prod){
+        this();
+        p = prod;
+    }
+    
+    Venda(Plano pla){
+        this();
+        plan = pla;
+    }
+    
+    void mostraVendaProd(){
+        
+        double res;
+        res = p.getValor() - (p.getValor() * desconto)/100;
+        System.out.println("=-= Dados da Venda =-=");
+        System.out.println("Forma de Pagamento: "+this.formaPagamento);
+        System.out.println("Desconto: "+this.desconto);
+        System.out.println("Data da Venda: "+this.dataVenda);
+        System.out.println("Quantidade:"+this.quantidade);
+        System.out.println("Produto: "+p.getNome());
+        p.setValor(res*quantidade);
+        System.out.println("Valor: "+p.getValor());
+        System.out.println("---------------");
+        
+    }
+    
+    void mostraVendaPlan(){
+        
+        double res;
+        res = plan.getValor() - (plan.getValor() * desconto)/100;
+        System.out.println("=-= Dados da Venda =-=");
+        System.out.println("Forma de Pagamento: "+this.formaPagamento);
+        System.out.println("Desconto: "+this.desconto);
+        System.out.println("Data da Venda: "+this.dataVenda);
+        System.out.println("Quantidade:"+this.quantidade);
+        System.out.println("Produto: "+plan.getTipo());
+        plan.setValor(res*quantidade);
+        System.out.println("Valor: "+plan.getValor());
+        System.out.println("---------------");
+        
+    }
 
-    public double getFormaPagamento() {
+    public static int getId() {
+        return Venda.id;
+    }
+    
+    public String getFormaPagamento() {
         return formaPagamento;
     }
 
-    public void setFormaPagamento(double formaPagamento) {
+    public void setFormaPagamento(String formaPagamento) {
         this.formaPagamento = formaPagamento;
     }
 
-    public double getDesconto() {
+    public int getDesconto() {
         return desconto;
     }
 
-    public void setDesconto(double desconto) {
+    public void setDesconto(int desconto) {
         this.desconto = desconto;
     }
 

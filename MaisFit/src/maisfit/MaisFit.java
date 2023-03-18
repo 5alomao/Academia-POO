@@ -1,8 +1,6 @@
 package maisfit;
 
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 public class MaisFit {
     
@@ -11,8 +9,7 @@ public class MaisFit {
         Scanner ent = new Scanner (System.in);
         
         Cliente cli1 = new Cliente();
-        Cliente cli2 = new Cliente();
-        
+
         cli1.setNome("Salomão Ferreira Junior");
         cli1.setCpf("174.133.196-08");
         cli1.setTelefone("997695915");
@@ -31,6 +28,8 @@ public class MaisFit {
         cli1.setNascimento(ent.nextLine());
         */
         //================================
+        Cliente cli2 = new Cliente();
+        
         cli2.setNome("Miguel");
         cli2.setCpf("123.123.123-12");
         cli2.setTelefone("99988-7766");
@@ -55,12 +54,11 @@ public class MaisFit {
         //================================
         
         Produto prod1 = new Produto();
-        Produto prod2 = new Produto();
         
         prod1.setNome("Creatina");
         prod1.setMarca("Growth");
         prod1.setCategoria("Suplementos");
-        prod1.setValor(69);
+        prod1.setValor(100);
         prod1.setQuantidade(30);
         /*
         System.out.println("Nome Produto:");
@@ -75,6 +73,8 @@ public class MaisFit {
         prod1.setQuantidade(ent.nextInt());
         */
         //================================
+        Produto prod2 = new Produto();
+        
         prod2.setNome("HiperCalórico");
         prod2.setMarca("BlackSkull");
         prod2.setCategoria("Suplementos");
@@ -99,7 +99,6 @@ public class MaisFit {
         //================================
         
         Funcionario fun1 = new Funcionario();
-        Funcionario fun2 = new Funcionario();
         
         fun1.setNome("Isaac Silva");
         fun1.setCpf("321.321.321-32");
@@ -125,6 +124,8 @@ public class MaisFit {
         fun1.setNascimento(ent.nextLine());
         */
         //================================
+        Funcionario fun2 = new Funcionario();
+        
         fun2.setNome("Eduardo Santos");
         fun2.setCpf("213-213-213-21");
         fun2.setCargo("Personal Trainer");
@@ -153,6 +154,61 @@ public class MaisFit {
         fun2.mostraDadosFuncionario();
         System.out.println("Total de Funcionarios:"+Funcionario.getId()+"\n");
         //================================
+        
+        Plano plan1 = new Plano();
+
+        plan1.setTipo("Mensal");
+        plan1.setValor(100);
+        /*
+        System.out.println("Plano:");
+        plan1.setTipo(ent.nextLine());
+        System.out.println("Valor:");
+        plan1.setValor(ent.nextDouble());
+        */
+        //================================
+        plan1.mostraDadosPlanos();
+        System.out.println("Total de Planos: "+Plano.getId()+"\n");
+        //================================
+        
+        Venda ven1 = new Venda(prod1);
+        
+        ven1.setFormaPagamento("Pix");
+        ven1.setDataVenda("12/03/2023");
+        ven1.setQuantidade(4);
+        ven1.setDesconto(20);
+        /*
+        System.out.println("Forma de Pagamento:");
+        ven1.setFormaPagamento(ent.nextLine());
+        System.out.println("Data da Venda:");
+        ven1.setDataVenda(ent.nextLine());
+        System.out.println("Quantidade");
+        ven1.setQuantidade(ent.nextInt());
+        System.out.println("Desconto:");
+        ven1.setDesconto(ent.nextInt());
+        */
+        //================================
+        Venda ven2 = new Venda(plan1);
+        
+        ven2.setFormaPagamento("Cartão de Crédito");
+        ven2.setDataVenda("18/03/2023");
+        ven2.setQuantidade(5);
+        ven2.setDesconto(40);
+        /*
+        System.out.println("Forma de Pagamento:");
+        ven2.setFormaPagamento(ent.nextLine());
+        System.out.println("Data da Venda:");
+        ven2.setDataVenda(ent.nextLine());
+        System.out.println("Quantidade");
+        ven2.setQuantidade(ent.nextInt());
+        System.out.println("Desconto:");
+        ven2.setDesconto(ent.nextInt());
+        */
+        //================================
+        ven1.mostraVendaProd();
+        ven2.mostraVendaPlan();
+        System.out.println("Total de Vendas: "+Venda.getId()+"\n");
+        //================================
+        
     }
 }
 
