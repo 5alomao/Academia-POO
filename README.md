@@ -8,7 +8,6 @@
 <ul>
   <li>Java</li>
   <li>SQL</li>
-  <li>HTML/CSS</li>
 </ul>
 
   ##
