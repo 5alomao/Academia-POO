@@ -7,11 +7,13 @@ public class Cliente {
     private String telefone;
     private String nascimento;
     private String endereco;
-    private static int id;
+    private int codCliente;
+    private static int cont;
 
     
     Cliente(){
-        Cliente.id = Cliente.id + 1;
+        Cliente.cont = Cliente.cont + 1;
+        this.codCliente = cont;
     }
 
     void mostraDadosCliente(){
@@ -26,8 +28,8 @@ public class Cliente {
         
     }
     
-    public static int getId() {
-        return Cliente.id;
+    public static int getCont() {
+        return Cliente.cont;
     }
      
     public String getNome() {

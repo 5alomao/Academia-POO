@@ -9,11 +9,13 @@ public class Funcionario {
     private String endereco;
     private String ctps;
     private String cargo;
-    private static int id;
+    private int codFuncionario;
+    private static int cont;
     
     
     Funcionario(){
-        Funcionario.id = Funcionario.id + 1;
+        Funcionario.cont = Funcionario.cont + 1;
+        this.codFuncionario = cont;
     }
     
     void mostraDadosFuncionario(){
@@ -30,8 +32,8 @@ public class Funcionario {
         
     }
 
-    public static int getId() {
-        return Funcionario.id;
+    public static int getCont() {
+        return Funcionario.cont;
     }
     
     public String getNome() {

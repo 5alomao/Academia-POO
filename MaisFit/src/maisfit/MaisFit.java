@@ -37,7 +37,7 @@ public class MaisFit {
         cli2.setNascimento("12/05/2001");
         /*
         System.out.println("Nome Completo:");
-        cli2.setNome(ent.nextLine());
+        cli2.setNome( );
         System.out.println("CPF:");
         cli2.setCpf(ent.nextLine());
         System.out.println("Telefone:");
@@ -50,7 +50,7 @@ public class MaisFit {
         //================================
         cli1.mostraDadosCliente();
         cli2.mostraDadosCliente();
-        System.out.println("Total de Clientes: "+Cliente.getId()+"\n");
+        System.out.println("Total de Clientes: "+Cliente.getCont()+"\n");
         //================================
         
         Produto prod1 = new Produto();
@@ -95,7 +95,7 @@ public class MaisFit {
         //================================
         prod1.mostraDadosProduto();
         prod2.mostraDadosProduto();
-        System.out.println("Total de Produtos:"+Produto.getId()+"\n");
+        System.out.println("Total de Produtos:"+Produto.getCont()+"\n");
         //================================
         
         Funcionario fun1 = new Funcionario();
@@ -152,7 +152,7 @@ public class MaisFit {
         //================================
         fun1.mostraDadosFuncionario();
         fun2.mostraDadosFuncionario();
-        System.out.println("Total de Funcionarios:"+Funcionario.getId()+"\n");
+        System.out.println("Total de Funcionarios:"+Funcionario.getCont()+"\n");
         //================================
         
         Plano plan1 = new Plano();
@@ -167,7 +167,7 @@ public class MaisFit {
         */
         //================================
         plan1.mostraDadosPlanos();
-        System.out.println("Total de Planos: "+Plano.getId()+"\n");
+        System.out.println("Total de Planos: "+Plano.getCont()+"\n");
         //================================
         
         Venda ven1 = new Venda(prod1);
@@ -206,7 +206,7 @@ public class MaisFit {
         //================================
         ven1.mostraVendaProd();
         ven2.mostraVendaPlan();
-        System.out.println("Total de Vendas: "+Venda.getId()+"\n");
+        System.out.println("Total de Vendas: "+Venda.getCont()+"\n");
         //================================
         
     }

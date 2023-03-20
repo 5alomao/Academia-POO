@@ -4,10 +4,12 @@ public class Plano {
     
     private String tipo;
     private double valor;
-    private static int id;
+    private int codPlano;
+    private static int cont;
     
     Plano(){
-        Plano.id = Plano.id + 1;
+        Plano.cont = Plano.cont + 1;
+        this.codPlano = cont;
     }
 
     void mostraDadosPlanos(){
@@ -19,8 +21,8 @@ public class Plano {
         
     }
     
-    public static int getId() {
-        return Plano.id;
+    public static int getCont() {
+        return Plano.cont;
     }
     
     public String getTipo() {

@@ -7,11 +7,11 @@ public class Produto {
     private int quantidade;
     private String marca;
     private String categoria;
-    private static int id;
+    private static int cont;
 
     
     Produto(){
-        Produto.id = Produto.id + 1;
+        Produto.cont = Produto.cont + 1;
     }
     
     void mostraDadosProduto(){
@@ -26,8 +26,8 @@ public class Produto {
         
     }
 
-    public static int getId() {
-        return Produto.id;
+    public static int getCont() {
+        return Produto.cont;
     }
     
     public String getNome() {

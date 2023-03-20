@@ -6,12 +6,14 @@ public class Venda {
     private int desconto;
     private String dataVenda;
     private int quantidade;
+    private int codVenda;
     Produto p;
     Plano plan;
-    private static int id;
+    private static int cont;
     
     Venda(){
-        Venda.id = Venda.id + 1 ;
+        Venda.cont = Venda.cont + 1 ;
+        this.codVenda = cont;
     }
     
     Venda(Produto prod){
@@ -56,8 +58,8 @@ public class Venda {
         
     }
 
-    public static int getId() {
-        return Venda.id;
+    public static int getCont() {
+        return Venda.cont;
     }
     
     public String getFormaPagamento() {
