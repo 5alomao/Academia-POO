@@ -37,7 +37,7 @@ public class MaisFit {
         cli2.setNascimento("12/05/2001");
         /*
         System.out.println("Nome Completo:");
-        cli2.setNome( );
+        cli2.setNome(ent.nextLine());
         System.out.println("CPF:");
         cli2.setCpf(ent.nextLine());
         System.out.println("Telefone:");
