@@ -97,12 +97,21 @@ public class MaisFit {
         prod2.mostraDadosProduto();
         System.out.println("Total de Produtos:"+Produto.getCont()+"\n");
         //================================
+        Cargo car1 = new Cargo();
         
-        Funcionario fun1 = new Funcionario();
+        car1.setTipo("Personal Trainer");
+        car1.setSalario(3000.92);
+        
+        Cargo car2 = new Cargo();
+        car2.setTipo("Recepcionista");
+        car2.setSalario(2200.42);
+        
+        //================================
+        
+        Funcionario fun1 = new Funcionario(car1);
         
         fun1.setNome("Isaac Silva");
         fun1.setCpf("321.321.321-32");
-        fun1.setCargo("Personal Trainer");
         fun1.setCtps("321.321-32");
         fun1.setTelefone("3295-0000");
         fun1.setEndereco("Centro");
@@ -112,8 +121,6 @@ public class MaisFit {
         fun1.setNome(ent.nextLine());
         System.out.println("CPF:");
         fun1.setCpf(ent.nextLine());
-        System.out.println("Cargo:");
-        fun1.setCargo(ent.nextLine());
         System.out.println("CTPS:");
         fun1.setCtps(ent.nextLine());
         System.out.println("Telefone:");
@@ -124,11 +131,10 @@ public class MaisFit {
         fun1.setNascimento(ent.nextLine());
         */
         //================================
-        Funcionario fun2 = new Funcionario();
+        Funcionario fun2 = new Funcionario(car2);
         
         fun2.setNome("Eduardo Santos");
         fun2.setCpf("213-213-213-21");
-        fun2.setCargo("Personal Trainer");
         fun2.setCtps("213-213-21");
         fun2.setTelefone("3295-1111");
         fun2.setEndereco("Rua São Paulo");
@@ -138,8 +144,6 @@ public class MaisFit {
         fun2.setNome(ent.nextLine());
         System.out.println("CPF:");
         fun2.setCpf(ent.nextLine());
-        System.out.println("Cargo:");
-        fun2.setCargo(ent.nextLine());
         System.out.println("CTPS:");
         fun2.setCtps(ent.nextLine());
         System.out.println("Telefone:");

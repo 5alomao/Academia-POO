@@ -7,20 +7,6 @@ public class Plano {
     private int codPlano;
     private static int cont;
     
-    Plano(){
-        Plano.cont = Plano.cont + 1;
-        this.codPlano = cont;
-    }
-
-    void mostraDadosPlanos(){
-        
-        System.out.println("=-= Planos =-=");
-        System.out.println("Tipo do Plano: "+this.tipo);
-        System.out.println("Valor: "+this.valor);
-        System.out.println("---------------");
-        
-    }
-    
     public static int getCont() {
         return Plano.cont;
     }
@@ -41,4 +27,17 @@ public class Plano {
         this.valor = valor;
     }
     
+    Plano(){
+        Plano.cont = Plano.cont + 1;
+        this.codPlano = cont;
+    }
+
+    void mostraDadosPlanos(){
+        
+        System.out.println("=-= Planos =-=");
+        System.out.println("Tipo do Plano: "+this.tipo);
+        System.out.println("Valor: "+this.valor);
+        System.out.println("---------------");
+        
+    }
 }

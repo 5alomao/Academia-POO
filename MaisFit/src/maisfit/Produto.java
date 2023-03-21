@@ -8,23 +8,7 @@ public class Produto {
     private String marca;
     private String categoria;
     private static int cont;
-
-    
-    Produto(){
-        Produto.cont = Produto.cont + 1;
-    }
-    
-    void mostraDadosProduto(){
-        
-        System.out.println("=-= Dados do Produto =-=");
-        System.out.println("Produto: "+this.nome);
-        System.out.println("Marca:"+this.marca);
-        System.out.println("Categoria:"+this.categoria);
-        System.out.println("Valor: "+this.valor);
-        System.out.println("Quantidade: "+this.quantidade);
-        System.out.println("---------------");
-        
-    }
+    private int codProduto;
 
     public static int getCont() {
         return Produto.cont;
@@ -69,5 +53,22 @@ public class Produto {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-     
+    
+    Produto(){
+        Produto.cont = Produto.cont + 1;
+        this.codProduto = cont;
+    }
+    
+    void mostraDadosProduto(){
+        
+        System.out.println("=-= Dados do Produto =-=");
+        System.out.println("Produto: "+this.nome);
+        System.out.println("Marca:"+this.marca);
+        System.out.println("Categoria:"+this.categoria);
+        System.out.println("Valor: "+this.valor);
+        System.out.println("Quantidade: "+this.quantidade);
+        System.out.println("---------------");
+        
+    }
+    
 }

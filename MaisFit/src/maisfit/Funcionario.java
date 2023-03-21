@@ -8,30 +8,10 @@ public class Funcionario {
     private String nascimento;
     private String endereco;
     private String ctps;
-    private String cargo;
     private int codFuncionario;
     private static int cont;
+    Cargo cargo;
     
-    
-    Funcionario(){
-        Funcionario.cont = Funcionario.cont + 1;
-        this.codFuncionario = cont;
-    }
-    
-    void mostraDadosFuncionario(){
-        
-        System.out.println("=-= Dados do Funcionario =-=");
-        System.out.println("Nome: "+this.nome);
-        System.out.println("CPF: "+this.cpf);
-        System.out.println("Cargo: "+this.cargo);
-        System.out.println("CTPS:"+this.ctps);
-        System.out.println("Telefone: "+this.telefone);
-        System.out.println("Endereço: "+this.endereco);
-        System.out.println("Data de Nascimento: "+this.nascimento);
-        System.out.println("---------------");
-        
-    }
-
     public static int getCont() {
         return Funcionario.cont;
     }
@@ -83,13 +63,25 @@ public class Funcionario {
     public void setCtps(String ctps) {
         this.ctps = ctps;
     }
-
-    public String getCargo() {
-        return cargo;
+    
+    Funcionario(Cargo c){
+        Funcionario.cont = Funcionario.cont + 1;
+        this.codFuncionario = cont;
+        this.cargo = c;        
+    }  
+    
+    void mostraDadosFuncionario(){
+        
+        System.out.println("=-= Dados do Funcionario =-=");
+        System.out.println("Nome: "+this.nome);
+        System.out.println("CPF: "+this.cpf);
+        System.out.println("Cargo:"+this.cargo.getTipo());
+        System.out.println("CTPS:"+this.ctps);
+        System.out.println("Telefone: "+this.telefone);
+        System.out.println("Endereço: "+this.endereco);
+        System.out.println("Data de Nascimento: "+this.nascimento);
+        System.out.println("---------------");
+        
     }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    } 
     
 }
