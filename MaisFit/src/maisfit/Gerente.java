@@ -1,6 +1,7 @@
 package maisfit;
 
 public class Gerente extends Funcionario {
+    
     private int senha;
     private int numFuncGerenciados;
 
@@ -20,7 +21,7 @@ public class Gerente extends Funcionario {
         this.numFuncGerenciados = numFuncGerenciados;
     }
     
-    public Gerente(Cargo c) {
+    Gerente(Cargo c) {
         super(c);
     }
     
