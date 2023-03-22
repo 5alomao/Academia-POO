@@ -154,6 +154,8 @@ public class MaisFit {
          */
         //================================
         fun1.mostraDadosFuncionario();
+        fun1.getBonificacao();
+        fun1.mostraDadosFuncionario();
         fun2.mostraDadosFuncionario();
         System.out.println("Total de Funcionarios:" + Funcionario.getCont() + "\n");
         //================================

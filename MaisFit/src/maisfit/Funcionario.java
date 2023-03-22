@@ -12,9 +12,11 @@ public class Funcionario {
     private static int cont;
     Cargo cargo;
     
+    
     public static int getCont() {
         return Funcionario.cont;
     }
+
     
     public String getNome() {
         return nome;
@@ -67,15 +69,17 @@ public class Funcionario {
     Funcionario(Cargo c){
         Funcionario.cont = Funcionario.cont + 1;
         this.codFuncionario = cont;
-        this.cargo = c;        
+        this.cargo = c;
     }  
     
     void mostraDadosFuncionario(){
         
         System.out.println("=-= Dados do Funcionario =-=");
+        System.out.println("Código do Funcionário: "+this.codFuncionario);
         System.out.println("Nome: "+this.nome);
         System.out.println("CPF: "+this.cpf);
         System.out.println("Cargo:"+this.cargo.getTipo());
+        System.out.println("Salário:"+this.cargo.getSalario());
         System.out.println("CTPS:"+this.ctps);
         System.out.println("Telefone: "+this.telefone);
         System.out.println("Endereço: "+this.endereco);
@@ -84,4 +88,7 @@ public class Funcionario {
         
     }
     
+    public double getBonificacao(){
+        return this.cargo.getSalario() * 0.10;
+    }
 }

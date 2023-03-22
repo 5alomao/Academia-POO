@@ -67,6 +67,7 @@ public class Venda {
         double res;
         res = p.getValor() - (p.getValor() * desconto)/100;
         System.out.println("=-= Dados da Venda =-=");
+        System.out.println("Código do Venda: "+this.codVenda);
         System.out.println("Forma de Pagamento: "+this.formaPagamento);
         System.out.println("Desconto: "+this.desconto);
         System.out.println("Data da Venda: "+this.dataVenda);

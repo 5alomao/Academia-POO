@@ -48,6 +48,7 @@ public class Produto {
     void mostraDadosProduto(){
         
         System.out.println("=-= Dados do Produto =-=");
+        System.out.println("Código do Produto: "+this.codProduto);
         System.out.println("Produto: "+this.nome);
         System.out.println("Marca:"+this.marca.getMarca());
         System.out.println("Categoria:"+this.categoria.getCategoria());

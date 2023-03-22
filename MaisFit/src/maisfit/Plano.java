@@ -35,6 +35,7 @@ public class Plano {
     void mostraDadosPlanos(){
         
         System.out.println("=-= Planos =-=");
+        System.out.println("Código do Plano: "+this.codPlano);
         System.out.println("Tipo do Plano: "+this.tipo);
         System.out.println("Valor: "+this.valor);
         System.out.println("---------------");
