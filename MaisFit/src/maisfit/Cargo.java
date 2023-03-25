@@ -1,5 +1,7 @@
 package maisfit;
 
+import java.util.List;
+
 public class Cargo {
     private String tipo;
     private double salario;
@@ -25,10 +27,24 @@ public class Cargo {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    public int getCodCargo() {
+        return codCargo;
+    }
     
     Cargo(){
         Cargo.cont = Cargo.cont + 1;
         this.codCargo = cont;
+    }
+    
+    public static void listarCargos(List<Cargo> listCargo){
+        for(Cargo cargo : listCargo){
+            System.out.println("=-= Dados do Cargo =-=");
+            System.out.println("Código do Cargo:"+cargo.getCodCargo());
+            System.out.println("Cargo:"+cargo.getTipo());
+            System.out.println("Salário:"+cargo.getSalario());
+            System.out.println("---------------");
+        }
     }
     
 }

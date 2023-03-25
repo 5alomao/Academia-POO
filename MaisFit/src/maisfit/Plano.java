@@ -1,5 +1,7 @@
 package maisfit;
 
+import java.util.List;
+
 public class Plano {
     
     private String tipo;
@@ -26,19 +28,23 @@ public class Plano {
     public void setValor(double valor) {
         this.valor = valor;
     }
+
+    public int getCodPlano() {
+        return codPlano;
+    }
     
     Plano(){
         Plano.cont = Plano.cont + 1;
         this.codPlano = cont;
     }
-
-    void mostraDadosPlanos(){
-        
-        System.out.println("=-= Planos =-=");
-        System.out.println("Código do Plano: "+this.codPlano);
-        System.out.println("Tipo do Plano: "+this.tipo);
-        System.out.println("Valor: "+this.valor);
-        System.out.println("---------------");
-        
+    
+    public static void listarPlanos(List<Plano> listPlano){
+        for(Plano plano : listPlano){
+            System.out.println("=-= Dados do Plano =-=");
+            System.out.println("Código do Plano: "+plano.getCodPlano());
+            System.out.println("Tipo do Plano: "+plano.getTipo());
+            System.out.println("Valor: "+plano.getValor());
+            System.out.println("---------------");
+        }
     }
 }

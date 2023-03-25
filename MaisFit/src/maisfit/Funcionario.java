@@ -1,5 +1,7 @@
 package maisfit;
 
+import java.util.List;
+
 public class Funcionario extends Pessoa{
 
     private String ctps;
@@ -19,6 +21,10 @@ public class Funcionario extends Pessoa{
     public void setCtps(String ctps) {
         this.ctps = ctps;
     }
+
+    public int getCodFuncionario() {
+        return codFuncionario;
+    }
     
     Funcionario(Cargo c){
         Funcionario.cont = Funcionario.cont + 1;
@@ -26,20 +32,20 @@ public class Funcionario extends Pessoa{
         this.cargo = c;
     }  
     
-    void mostraDadosFuncionario(){
-        
-        System.out.println("=-= Dados do Funcionario =-=");
-        System.out.println("Código do Funcionário: "+this.codFuncionario);
-        System.out.println("Nome: "+this.nome);
-        System.out.println("CPF: "+this.cpf);
-        System.out.println("Cargo:"+this.cargo.getTipo());
-        System.out.println("Salário:"+this.cargo.getSalario());
-        System.out.println("CTPS:"+this.ctps);
-        System.out.println("Telefone: "+this.telefone);
-        System.out.println("Endereço: "+this.endereco);
-        System.out.println("Data de Nascimento: "+this.nascimento);
-        System.out.println("---------------");
-        
+    public static void mostrarFuncionarios(List<Funcionario> listFuncionario){
+        for(Funcionario funcionario : listFuncionario){
+            System.out.println("=-= Dados do Funcionario =-=");
+            System.out.println("Código do Funcionário: "+funcionario.getCodFuncionario());
+            System.out.println("Nome: "+funcionario.getNome());
+            System.out.println("CPF: "+funcionario.getCpf());
+            System.out.println("Cargo:"+funcionario.cargo.getTipo());
+            System.out.println("Salário:"+funcionario.cargo.getSalario());
+            System.out.println("CTPS:"+funcionario.getCtps());
+            System.out.println("Telefone: "+funcionario.getTelefone());
+            System.out.println("Endereço: "+funcionario.getEndereco());
+            System.out.println("Data de Nascimento: "+funcionario.getNascimento());
+            System.out.println("---------------");
+        }
     }
     
     public double getBonificacao(){

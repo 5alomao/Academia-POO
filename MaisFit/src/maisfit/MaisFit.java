@@ -1,15 +1,27 @@
 package maisfit;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MaisFit {
 
     public static void main(String[] args) {
-
+        
         Scanner ent = new Scanner(System.in);
-
+        
+        List<Cliente> listCliente = new ArrayList();
+        List<Funcionario> listFuncionario = new ArrayList();
+        List<Cargo> listCargo = new ArrayList();
+        List<Venda> listVenda = new ArrayList();
+        List<Plano> listPlano = new ArrayList();
+        List<Produto> listProduto = new ArrayList();
+        List<Marca> listMarca = new ArrayList();
+        List<Categoria> listCategoria = new ArrayList();
+        
+        //================================
         Cliente cli1 = new Cliente();
-
         cli1.setNome("Salomão Ferreira Junior");
         cli1.setCpf("174.133.196-08");
         cli1.setTelefone("997695915");
@@ -27,9 +39,7 @@ public class MaisFit {
         System.out.println("Data de Nascimento:");
         cli1.setNascimento(ent.nextLine());
          */
-        //================================
         Cliente cli2 = new Cliente();
-
         cli2.setNome("Miguel");
         cli2.setCpf("123.123.123-12");
         cli2.setTelefone("99988-7766");
@@ -47,26 +57,30 @@ public class MaisFit {
         System.out.println("Data de Nascimento:");
         cli2.setNascimento(ent.nextLine());
          */
-        //================================
-        cli1.mostraDadosCliente();
-        cli2.mostraDadosCliente();
+        listCliente.add(cli1);
+        listCliente.add(cli2);
+        Cliente.listarClientes(listCliente);
         System.out.println("Total de Clientes: " + Cliente.getCont() + "\n");
         //================================
         Marca mar1 = new Marca();
         mar1.setMarca("Growth");
         Marca mar2 = new Marca();
         mar2.setMarca("BlackSkull");
+        listMarca.add(mar1);
+        listMarca.add(mar2);
+        Marca.listarMarcas(listMarca);
         System.out.println("Total de Marcas:" + Marca.getCont());
         //================================
         Categoria cat1 = new Categoria();
         cat1.setCategoria("Suplementos");
         Categoria cat2 = new Categoria();
         cat2.setCategoria("Roupas");
+        listCategoria.add(cat1);
+        listCategoria.add(cat2);
+        Categoria.listarCategorias(listCategoria);
         System.out.println("Total de Categorias:" + Categoria.getCont());
         //================================
-
         Produto prod1 = new Produto(cat1, mar1);
-
         prod1.setNome("Creatina");
         prod1.setValor(100);
         prod1.setQuantidade(30);
@@ -78,9 +92,7 @@ public class MaisFit {
         System.out.println("Quantidade:");
         prod1.setQuantidade(ent.nextInt());
          */
-        //================================
         Produto prod2 = new Produto(cat2, mar2);
-
         prod2.setNome("Blusa MaisFit");
         prod2.setValor(50.30);
         prod2.setQuantidade(20);
@@ -92,23 +104,23 @@ public class MaisFit {
         System.out.println("Quantidade:");
         prod2.setQuantidade(ent.nextInt());
          */
-        //================================
-        prod1.mostraDadosProduto();
-        prod2.mostraDadosProduto();
+        listProduto.add(prod1);
+        listProduto.add(prod2);
+        Produto.listarProdutos(listProduto);
         System.out.println("Total de Produtos:" + Produto.getCont() + "\n");
         //================================
         Cargo car1 = new Cargo();
-
         car1.setTipo("Personal Trainer");
         car1.setSalario(3000.92);
-
         Cargo car2 = new Cargo();
         car2.setTipo("Recepcionista");
         car2.setSalario(2200.42);
-
+        listCargo.add(car1);
+        listCargo.add(car2);
+        Cargo.listarCargos(listCargo);
+        System.out.println("Total de Cargos:" + Cargo.getCont() + "\n");
         //================================
         Funcionario fun1 = new Funcionario(car1);
-
         fun1.setNome("Isaac Silva");
         fun1.setCpf("321.321.321-32");
         fun1.setCtps("321.321-32");
@@ -129,9 +141,7 @@ public class MaisFit {
         System.out.println("Data de Nascimento:");
         fun1.setNascimento(ent.nextLine());
          */
-        //================================
         Funcionario fun2 = new Funcionario(car2);
-
         fun2.setNome("Eduardo Santos");
         fun2.setCpf("213-213-213-21");
         fun2.setCtps("213-213-21");
@@ -152,14 +162,12 @@ public class MaisFit {
         System.out.println("Data de Nascimento:");
         fun2.setNascimento(ent.nextLine());
          */
-        //================================
-        fun1.mostraDadosFuncionario();
-        fun2.mostraDadosFuncionario();
+        listFuncionario.add(fun1);
+        listFuncionario.add(fun2);
+        Funcionario.mostrarFuncionarios(listFuncionario);
         System.out.println("Total de Funcionarios:" + Funcionario.getCont() + "\n");
         //================================
-
         Plano plan1 = new Plano();
-
         plan1.setTipo("Mensal");
         plan1.setValor(100);
         /*
@@ -168,13 +176,11 @@ public class MaisFit {
         System.out.println("Valor:");
         plan1.setValor(ent.nextDouble());
          */
-        //================================
-        plan1.mostraDadosPlanos();
+        listPlano.add(plan1);
+        Plano.listarPlanos(listPlano);
         System.out.println("Total de Planos: " + Plano.getCont() + "\n");
         //================================
-
         Venda ven1 = new Venda(prod1);
-
         ven1.setFormaPagamento("Pix");
         ven1.setDataVenda("12/03/2023");
         ven1.setQuantidade(4);
@@ -189,9 +195,7 @@ public class MaisFit {
         System.out.println("Desconto:");
         ven1.setDesconto(ent.nextInt());
          */
-        //================================
         Venda ven2 = new Venda(plan1);
-
         ven2.setFormaPagamento("Cartão de Crédito");
         ven2.setDataVenda("18/03/2023");
         ven2.setQuantidade(5);
@@ -206,12 +210,11 @@ public class MaisFit {
         System.out.println("Desconto:");
         ven2.setDesconto(ent.nextInt());
          */
-        //================================
-        ven1.mostraVendaProd();
-        ven2.mostraVendaPlan();
+        listVenda.add(ven1);
+        listVenda.add(ven2);
+        Venda.listarVendas(listVenda);
         System.out.println("Total de Vendas: " + Venda.getCont() + "\n");
         //================================
-
     }
     
 }

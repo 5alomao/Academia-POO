@@ -1,5 +1,7 @@
 package maisfit;
 
+import java.util.List;
+
 public class Produto {
     
     private String nome;
@@ -37,6 +39,10 @@ public class Produto {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
+
+    public int getCodProduto() {
+        return codProduto;
+    }
     
     Produto(Categoria c, Marca m){
         Produto.cont = Produto.cont + 1;
@@ -45,17 +51,17 @@ public class Produto {
         this.marca = m;
     }
     
-    void mostraDadosProduto(){
-        
-        System.out.println("=-= Dados do Produto =-=");
-        System.out.println("Código do Produto: "+this.codProduto);
-        System.out.println("Produto: "+this.nome);
-        System.out.println("Marca:"+this.marca.getMarca());
-        System.out.println("Categoria:"+this.categoria.getCategoria());
-        System.out.println("Valor: "+this.valor);
-        System.out.println("Quantidade: "+this.quantidade);
-        System.out.println("---------------");
-        
+    public static void listarProdutos(List<Produto> listProduto){
+        for(Produto produto : listProduto){
+            System.out.println("=-= Dados do Produto =-=");
+            System.out.println("Código do Produto: "+produto.getCodProduto());
+            System.out.println("Produto: "+produto.getNome());
+            System.out.println("Marca:"+produto.marca.getMarca());
+            System.out.println("Categoria:"+produto.categoria.getCategoria());
+            System.out.println("Valor: "+produto.getValor());
+            System.out.println("Quantidade: "+produto.getQuantidade());
+            System.out.println("---------------");
+        }
     }
     
 }

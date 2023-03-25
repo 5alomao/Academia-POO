@@ -1,5 +1,7 @@
 package maisfit;
 
+import java.util.List;
+
 public class Venda {
     
     private String formaPagamento;
@@ -46,7 +48,11 @@ public class Venda {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-   
+
+    public int getCodVenda() {
+        return codVenda;
+    }
+    
     Venda(){
         Venda.cont = Venda.cont + 1 ;
         this.codVenda = cont;
@@ -95,5 +101,33 @@ public class Venda {
         System.out.println("---------------");
         
     }
+    void tipoVenda(){
+        double res;
+        if(plan != null){
+            res = plan.getValor() - (plan.getValor() * desconto)/100; 
+            System.out.println("Plano: " + plan.getTipo());
+            plan.setValor(res * quantidade);
+            System.out.println("Valor: " + plan.getValor());
+            System.out.println("---------------");
+        }else if(p != null){
+            res = p.getValor() - (p.getValor() * desconto)/100;
+            System.out.println("Produto: " + p.getNome());
+            p.setValor(res * quantidade);
+            System.out.println("Valor: " + p.getValor());
+            System.out.println("---------------");
+        }
+    }
     
+    public static void listarVendas(List<Venda> listVenda){
+        for(Venda venda : listVenda){
+            double res;
+            System.out.println("=-= Dados da Venda =-=");
+            System.out.println("Código do Venda: "+venda.getCodVenda());
+            System.out.println("Forma de Pagamento: "+venda.getFormaPagamento());
+            System.out.println("Desconto: "+venda.getDesconto());
+            System.out.println("Data da Venda: "+venda.getDataVenda());
+            System.out.println("Quantidade: "+venda.getQuantidade());
+            venda.tipoVenda();
+        }
+    }
 }
