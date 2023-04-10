@@ -110,23 +110,24 @@ public class MaisFit {
         System.out.println("Total de Produtos:" + Produto.getCont() + "\n");
         //================================
         Cargo car1 = new Cargo();
-        car1.setTipo("Personal Trainer");
-        car1.setSalario(3000.92);
+        car1.setTipo("Gerente");
+        car1.setSalario(3000);
         Cargo car2 = new Cargo();
-        car2.setTipo("Recepcionista");
-        car2.setSalario(2200.42);
+        car2.setTipo("Supervisor");
+        car2.setSalario(2000);
         listCargo.add(car1);
         listCargo.add(car2);
         Cargo.listarCargos(listCargo);
         System.out.println("Total de Cargos:" + Cargo.getCont() + "\n");
         //================================
-        Funcionario fun1 = new Funcionario(car1);
+        Funcionario fun1 = new Gerente(car1);
         fun1.setNome("Isaac Silva");
         fun1.setCpf("321.321.321-32");
         fun1.setCtps("321.321-32");
         fun1.setTelefone("3295-0000");
         fun1.setEndereco("Centro");
         fun1.setNascimento("26/04/1998");
+        fun1.getBonificacao();
         /*
         System.out.println("Nome Completo:");
         fun1.setNome(ent.nextLine());
@@ -141,13 +142,14 @@ public class MaisFit {
         System.out.println("Data de Nascimento:");
         fun1.setNascimento(ent.nextLine());
          */
-        Funcionario fun2 = new Funcionario(car2);
+        Funcionario fun2 = new Supervisor(car2);
         fun2.setNome("Eduardo Santos");
         fun2.setCpf("213-213-213-21");
         fun2.setCtps("213-213-21");
         fun2.setTelefone("3295-1111");
         fun2.setEndereco("Rua São Paulo");
         fun2.setNascimento("12/09/1993");
+        fun2.getBonificacao();
         /*
         System.out.println("Nome Completo:");
         fun2.setNome(ent.nextLine());
@@ -162,10 +164,15 @@ public class MaisFit {
         System.out.println("Data de Nascimento:");
         fun2.setNascimento(ent.nextLine());
          */
+        ControleBonificacao cbn = new ControleBonificacao();
+        cbn.registra(fun1);
+        cbn.registra(fun2);
+        
         listFuncionario.add(fun1);
         listFuncionario.add(fun2);
         Funcionario.mostrarFuncionarios(listFuncionario);
         System.out.println("Total de Funcionarios:" + Funcionario.getCont() + "\n");
+        
         //================================
         Plano plan1 = new Plano();
         plan1.setTipo("Mensal");

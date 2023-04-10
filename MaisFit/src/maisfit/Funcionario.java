@@ -2,7 +2,7 @@ package maisfit;
 
 import java.util.List;
 
-public class Funcionario extends Pessoa{
+abstract public class Funcionario extends Pessoa{
 
     private String ctps;
     private int codFuncionario;
@@ -48,12 +48,6 @@ public class Funcionario extends Pessoa{
         }
     }
     
-    public double getBonificacao(){
-        return this.cargo.getSalario() * 0.10;
-    }
-    
-    void alteraSalario(double alteracao){
-        cargo.setSalario(cargo.getSalario()+alteracao);
-        System.out.println("Salário Alterado !");
-    }
+    abstract public double getBonificacao();
+   
 }
