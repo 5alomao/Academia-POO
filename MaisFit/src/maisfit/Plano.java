@@ -2,7 +2,7 @@ package maisfit;
 
 import java.util.List;
 
-public class Plano {
+public class Plano implements Desconto {
     
     private String tipo;
     private double valor;
@@ -46,5 +46,10 @@ public class Plano {
             System.out.println("Valor: "+plano.getValor());
             System.out.println("---------------");
         }
+    }
+
+    @Override
+    public double calculaDesconto(int desconto) {
+        return this.getValor() - (this.getValor()*desconto/100);
     }
 }

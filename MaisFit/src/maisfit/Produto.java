@@ -2,7 +2,7 @@ package maisfit;
 
 import java.util.List;
 
-public class Produto {
+public class Produto implements Desconto{
     
     private String nome;
     private double valor;
@@ -62,6 +62,11 @@ public class Produto {
             System.out.println("Quantidade: "+produto.getQuantidade());
             System.out.println("---------------");
         }
+    }
+
+    @Override
+    public double calculaDesconto(int desconto) {
+        return this.getValor() - (this.getValor()*desconto/100);
     }
     
 }

@@ -1,5 +1,5 @@
 package maisfit;
 
 public interface Desconto {
-    double calculaDesconto();
+    double calculaDesconto(int desconto);
 }

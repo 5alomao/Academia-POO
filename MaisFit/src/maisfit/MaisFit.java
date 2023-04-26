@@ -185,6 +185,7 @@ public class MaisFit {
          */
         listPlano.add(plan1);
         Plano.listarPlanos(listPlano);
+        System.out.println("Com Desconto: "+plan1.calculaDesconto(20));
         System.out.println("Total de Planos: " + Plano.getCont() + "\n");
         //================================
         Venda ven1 = new Venda(prod1);
