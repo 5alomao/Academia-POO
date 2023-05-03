@@ -68,7 +68,7 @@ public class Venda {
         plan = pla;
     }
     
-    void mostraVendaProd(){
+    void listarVendaProd(){
         
         double res;
         res = p.getValor() - (p.getValor() * desconto)/100;
@@ -85,7 +85,7 @@ public class Venda {
         
     }
     
-    void mostraVendaPlan(){
+    void listarVendaPlan(){
         
         double res;
         res = plan.getValor() - (plan.getValor() * desconto)/100;

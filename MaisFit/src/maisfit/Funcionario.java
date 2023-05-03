@@ -32,7 +32,7 @@ abstract public class Funcionario extends Pessoa{
         this.cargo = c;
     }  
     
-    public static void mostrarFuncionarios(List<Funcionario> listFuncionario){
+    public static void listarFuncionarios(List<Funcionario> listFuncionario){
         for(Funcionario funcionario : listFuncionario){
             System.out.println("=-= Dados do Funcionario =-=");
             System.out.println("Código do Funcionário: "+funcionario.getCodFuncionario());

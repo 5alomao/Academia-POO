@@ -170,7 +170,7 @@ public class MaisFit {
         
         listFuncionario.add(fun1);
         listFuncionario.add(fun2);
-        Funcionario.mostrarFuncionarios(listFuncionario);
+        Funcionario.listarFuncionarios(listFuncionario);
         System.out.println("Total de Funcionarios:" + Funcionario.getCont() + "\n");
         
         //================================
