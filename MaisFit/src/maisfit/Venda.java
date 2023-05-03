@@ -11,6 +11,7 @@ public class Venda {
     private int codVenda;
     Produto p;
     Plano plan;
+    Cliente cli;
     private static int cont;
     
     public static int getCont() {
@@ -53,19 +54,18 @@ public class Venda {
         return codVenda;
     }
     
-    Venda(){
+    Venda(Cliente c, Produto prod){
         Venda.cont = Venda.cont + 1 ;
         this.codVenda = cont;
+        this.cli = c;
+        this.p = prod;
     }
     
-    Venda(Produto prod){
-        this();
-        p = prod;
-    }
-    
-    Venda(Plano pla){
-        this();
-        plan = pla;
+    Venda(Cliente c, Plano plan){
+        Venda.cont = Venda.cont + 1 ;
+        this.codVenda = cont;
+        this.cli = c;
+        this.plan = plan;
     }
     
     void listarVendaProd(){
@@ -74,6 +74,7 @@ public class Venda {
         res = p.getValor() - (p.getValor() * desconto)/100;
         System.out.println("=-= Dados da Venda =-=");
         System.out.println("Código do Venda: "+this.codVenda);
+        System.out.println("Cliente: "+this.cli.getNome());
         System.out.println("Forma de Pagamento: "+this.formaPagamento);
         System.out.println("Desconto: "+this.desconto);
         System.out.println("Data da Venda: "+this.dataVenda);
@@ -91,6 +92,7 @@ public class Venda {
         res = plan.getValor() - (plan.getValor() * desconto)/100;
         System.out.println("=-= Dados da Venda =-=");
         System.out.println("Código do Venda: "+this.codVenda);
+        System.out.println("Cliente: "+this.cli.getNome());
         System.out.println("Forma de Pagamento: "+this.formaPagamento);
         System.out.println("Desconto: "+this.desconto);
         System.out.println("Data da Venda: "+this.dataVenda);
@@ -123,6 +125,7 @@ public class Venda {
             double res;
             System.out.println("=-= Dados da Venda =-=");
             System.out.println("Código do Venda: "+venda.getCodVenda());
+            System.out.println("Cliente: "+venda.cli.getNome());
             System.out.println("Forma de Pagamento: "+venda.getFormaPagamento());
             System.out.println("Desconto: "+venda.getDesconto());
             System.out.println("Data da Venda: "+venda.getDataVenda());

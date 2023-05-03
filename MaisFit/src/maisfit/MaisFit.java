@@ -188,7 +188,7 @@ public class MaisFit {
         System.out.println("Com Desconto: "+plan1.calculaDesconto(20));
         System.out.println("Total de Planos: " + Plano.getCont() + "\n");
         //================================
-        Venda ven1 = new Venda(prod1);
+        Venda ven1 = new Venda(cli1,prod1);
         ven1.setFormaPagamento("Pix");
         ven1.setDataVenda("12/03/2023");
         ven1.setQuantidade(4);
@@ -203,7 +203,7 @@ public class MaisFit {
         System.out.println("Desconto:");
         ven1.setDesconto(ent.nextInt());
          */
-        Venda ven2 = new Venda(plan1);
+        Venda ven2 = new Venda(cli2,plan1);
         ven2.setFormaPagamento("Cartão de Crédito");
         ven2.setDataVenda("18/03/2023");
         ven2.setQuantidade(5);
